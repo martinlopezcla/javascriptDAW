@@ -10,3 +10,8 @@
 
 let edad = 20; // cambia el valor para probar distintos casos
 
+function edad1(edad) {
+  return edad >= 14 && edad <= 90;
+}
+
+console.log(edad1(8888));
