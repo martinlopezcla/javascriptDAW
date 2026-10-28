@@ -21,6 +21,16 @@
  *   El 10 es múltiplo de 2
  */
 
-for (let i = 1; i <= 100; i++) {
-
+function multiplos() {
+  for (let i = 1; i <= 100; i++) {
+    if (i % 2 == 0) {
+      console.log(i + "Es multiplo de 2");
+    } else if (i % 3 == 0) {
+      console.log(i + "Es multiplo de 3");
+    } else {
+      console.log(i);
+    }
+  }
 }
+
+multiplos();

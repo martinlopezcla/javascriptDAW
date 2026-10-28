@@ -8,10 +8,17 @@
  * extremos: 14 o 90.
  */
 
-let edad = 20; // cambia el valor para probar distintos casos
-
 function edad1(edad) {
   return edad >= 14 && edad <= 90;
 }
 
-console.log(edad1(8888));
+let edad = 20;
+console.log(edad + ": " + edad1(edad)); // 20: true
+edad = 14;
+console.log(edad + ": " + edad1(edad)); // 14: true
+edad = 90;
+console.log(edad + ": " + edad1(edad)); // 90: true
+edad = 1;
+console.log(edad + ": " + edad1(edad)); // 1: false
+edad = 100;
+console.log(edad + ": " + edad1(edad)); // 100: false

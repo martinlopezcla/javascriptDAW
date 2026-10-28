@@ -1,11 +1,17 @@
-/**
- * Ejercicio 14 — Tabla de multiplicar
- * (Sentencias: bucles)
- * --------------------------------------------------------------------
- *
- * Crea un script que pida al usuario un número y escriba en la consola la
- * tabla de multiplicar de ese número.
- */
+let n = Number();
 
-let n = prompt("Introduce un número:");
+function tablaMultiplicar(n) {
+  if (typeof n !== "number" || isNaN(n)) {
+    console.log("Número no válido");
+    return;
+  }
 
+  console.log(`Tabla del ${n}`);
+
+  for (let i = 1; i <= 10; i++) {
+    console.log(`${n} x ${i} = ${n * i}`);
+  }
+}
+
+tablaMultiplicar(8);
+tablaMultiplicar("HOlas");
