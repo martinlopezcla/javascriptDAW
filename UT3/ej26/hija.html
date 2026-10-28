@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ejercicio 26 - Hija</title>
+  </head>
+  <body>
+    <h2>Ventana hija</h2>
+    <button onclick="responder()">Responder</button>
+
+    <script>
+      function mostrarMensaje(texto) {
+        alert("La principal dice: " + texto);
+      }
+
+      function responder() {
+        if (window.opener === null || window.opener.closed) {
+          alert("La ventana principal ya no está abierta");
+          return;
+        }
+
+        let texto = prompt("Respuesta para la principal:");
+        if (texto === null) {
+          return;
+        }
+
+        window.opener.recibirRespuesta(texto);
+      }
+    </script>
+  </body>
+</html>

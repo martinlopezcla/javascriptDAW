@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ejercicio 26 - Principal</title>
+  </head>
+  <body>
+    <h1>Ejercicio 26 - Ventana principal</h1>
+    <button onclick="abrirHija()">Abrir hija</button>
+    <button onclick="enviarMensaje()">Enviar mensaje</button>
+
+    <script>
+      // Referencia a la ventana hija (null mientras no se abra)
+      let hija = null;
+
+      function abrirHija() {
+        hija = window.open("hija.html", "hija", "width=400,height=300");
+      }
+
+      function enviarMensaje() {
+        if (hija === null || hija.closed) {
+          alert("Primero tienes que abrir la ventana hija");
+          return;
+        }
+
+        let texto = prompt("Mensaje para la hija:");
+        if (texto === null) {
+          return;
+        }
+
+        hija.mostrarMensaje(texto);
+      }
+
+      function recibirRespuesta(texto) {
+        alert("La hija dice: " + texto);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ejercicio 29 - mostrarUbicacion</title>
+  </head>
+  <body>
+    <h1>Ejercicio 29 - Partes de la dirección de la página</h1>
+    <button onclick="mostrarUbicacion()">Mostrar ubicación</button>
+
+    <script>
+      function mostrarUbicacion() {
+        console.log("href: " + location.href);
+        console.log("origin: " + location.origin);
+        console.log("protocol: " + location.protocol);
+        console.log("hostname: " + location.hostname);
+        console.log("port: " + location.port);
+        console.log("pathname: " + location.pathname);
+        console.log("search: " + location.search);
+        console.log("hash: " + location.hash);
+      }
+
+      mostrarUbicacion();
+
+    </script>
+  </body>
+</html>
